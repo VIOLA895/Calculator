@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px); /* Reduced button size */
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px); /* Reduced button size */
+    gap: 8px; /* Reduced gap between buttons */
+    background-color: #fff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px; /* Reduced border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Reduced box-shadow */
+}
+
+.output {
+    grid-column: span 4;
+    background-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; /* Centered content */
+    padding: 8px; /* Reduced padding */
+    border-radius: 8px; /* Reduced border radius */
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand, .current-operand {
+    color: #666;
+    font-size: 1.25rem; /* Reduced font size */
+}
+
+.current-operand {
+    font-size: 2rem; /* Reduced font size */
+}
+
+button {
+    font-size: 1.5rem; /* Reduced font size */
+    border: none;
+    border-radius: 8px; /* Reduced border radius */
+    background-color: #f7f8fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced box-shadow */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e4e5e9;
+}
+
+button:active {
+    background-color: #d4d5d9;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+[data-operation] {
+    background-color: #f9c74f;
+}
+
+[data-operation]:hover {
+    background-color: #f5b436;
+}
+
+[data-equals] {
+    background-color: #f94144;
+    color: #fff;
+}
+
+[data-equals]:hover {
+    background-color: #f72529;
+}
+
+[data-all-clear] {
+    background-color: #f3722c;
+    color: #fff;
+}
+
+[data-all-clear]:hover {
+    background-color: #f0601e;
+}
+
+[data-delete] {
+    background-color: #577590;
+    color: #fff;
+}
+
+[data-delete]:hover {
+    background-color: #4b6982;
+}
