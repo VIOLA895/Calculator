@@ -12,7 +12,7 @@ body {
     width: 100%;
 }
 
-.calculator-grid {
+.calculator-container {
     display: grid;
     grid-template-columns: repeat(4, 80px); /* Reduced button size */
     grid-template-rows: minmax(100px, auto) repeat(5, 80px); /* Reduced button size */
